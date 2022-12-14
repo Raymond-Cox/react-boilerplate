@@ -1,6 +1,6 @@
 # react-boilerplate
 
-A template to start React projects from using Parcel as the bundler.
+A template to start React projects using Parcel as the bundler.
 
 ## Toolchains
 
@@ -22,4 +22,11 @@ Aside from the React libraries, this project includes:
 
 Note: Axios is clamped to the latest version before 1.0.0 release. The v1 release had lots of issues early in, so I opted to stay behind until they iron out the problems.
 
-##
+## Extras
+
+Eslint configuration extends the [js-standard](https://standardjs.com/).
+
+## TODOS
+
+-   Setup Sonarcloud
+-   Setup GH Actions PR: (format, lint, test, build) Merge-to-main: (test, build, deploy)
