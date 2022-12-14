@@ -10,7 +10,7 @@ env:
     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
 jobs:
-    Setup:
+    Test_And_Audit:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
@@ -25,10 +25,6 @@ jobs:
             - name: Install Packages
               run: npm install
 
-    Test_And_Audit:
-        runs-on: ubuntu-latest
-        needs: Setup
-        steps:
             - name: Audit
               run: npm audit --audit-level=high
 
@@ -44,9 +40,5 @@ jobs:
             - name: SonarCloud Scan
               uses: SonarSource/sonarcloud-github-action@master
 
-    Build:
-        runs-on: ubuntu-latest
-        needs: Setup
-        steps:
             - name: Build
               run: npm run build

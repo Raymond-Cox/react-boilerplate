@@ -13,7 +13,7 @@ permissions:
     contents: write
 
 jobs:
-    Setup:
+    Deploy:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
@@ -28,10 +28,6 @@ jobs:
             - name: Install Packages
               run: npm install
 
-    Test_And_Audit:
-        runs-on: ubuntu-latest
-        needs: Setup
-        steps:
             - name: Audit
               run: npm audit --audit-level=high
 
@@ -41,10 +37,6 @@ jobs:
             - name: SonarCloud Scan
               uses: SonarSource/sonarcloud-github-action@master
 
-    Build_And_Deploy:
-        runs-on: ubuntu-latest
-        needs: Test_And_Audit
-        steps:
             - name: Build 🔧
               run: npm run build
 
