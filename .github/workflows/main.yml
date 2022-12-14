@@ -30,6 +30,7 @@ jobs:
 
     Test_And_Audit:
         needs: Setup
+        steps:
             - name: Audit
               run: npm audit --audit-level=high
 
