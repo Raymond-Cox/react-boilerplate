@@ -13,21 +13,23 @@ permissions:
     contents: write
 
 jobs:
-    Test_And_Audit:
+    Setup:
         runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3
-              with:
-                  fetch-depth: 0
+          steps:
+              - uses: actions/checkout@v3
+                with:
+                    fetch-depth: 0
 
-            - name: Setup Node 16.x
-              uses: actions/setup-node@v3
-              with:
-                  node-version: 16.x
+              - name: Setup Node 16.x
+                uses: actions/setup-node@v3
+                with:
+                    node-version: 16.x
 
-            - name: Install Packages
-              run: npm install
+              - name: Install Packages
+                run: npm install
 
+    Test_And_Audit:
+        needs: Setup
             - name: Audit
               run: npm audit --audit-level=high
 
@@ -38,7 +40,7 @@ jobs:
               uses: SonarSource/sonarcloud-github-action@master
 
     Build_And_Deploy:
-        runs-on: ubuntu-latest
+        needs: Test_And_Audit
         steps:
             - name: Build 🔧
               run: npm run build
