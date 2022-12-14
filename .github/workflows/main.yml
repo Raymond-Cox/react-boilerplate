@@ -1,0 +1,48 @@
+name: Merge-to-Main
+on:
+    push:
+        branches:
+            - main
+    # allows you to manually trigger this in GH actions
+    workflow_dispatch:
+
+env:
+    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+jobs:
+    Test_And_Audit:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
+
+            - name: Setup Node 16.x
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 16.x
+
+            - name: Install Packages
+              run: npm install
+
+            - name: Audit
+              run: npm audit --audit-level=high
+
+            - name: Test
+              run: npm run test
+
+            - name: SonarCloud Scan
+              uses: SonarSource/sonarcloud-github-action@master
+
+    Build_And_Deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Build 🔧
+              run: npm run build
+
+            - name: Deploy 🚀
+              uses: JamesIves/github-pages-deploy-action@v4
+              permissions:
+                  contents: write
+              with:
+                  folder: dist
