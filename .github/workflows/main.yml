@@ -9,6 +9,9 @@ on:
 env:
     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
+permissions:
+    contents: write
+
 jobs:
     Test_And_Audit:
         runs-on: ubuntu-latest
@@ -42,7 +45,5 @@ jobs:
 
             - name: Deploy 🚀
               uses: JamesIves/github-pages-deploy-action@v4
-              permissions:
-                  contents: write
               with:
                   folder: dist
