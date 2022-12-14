@@ -1,0 +1,35 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "eslint-config-standard",
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+        "prettier"
+    ],
+    "overrides": [
+        {
+            "files": ["**/*.test.js"],
+            "env": { "jest/globals": true },
+            "plugins": ["jest"],
+            "extends": ["plugin:jest/recommended"]
+        }
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "plugins": ["react", "jest"],
+    "rules": {
+        "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+}
