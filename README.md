@@ -28,5 +28,4 @@ Eslint configuration extends the [js-standard](https://standardjs.com/).
 
 ## TODOS
 
--   Setup Sonarcloud
 -   Setup GH Actions PR: (format, lint, test, build) Merge-to-main: (test, build, deploy)
