@@ -15,18 +15,18 @@ permissions:
 jobs:
     Setup:
         runs-on: ubuntu-latest
-          steps:
-              - uses: actions/checkout@v3
-                with:
-                    fetch-depth: 0
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
 
-              - name: Setup Node 16.x
-                uses: actions/setup-node@v3
-                with:
-                    node-version: 16.x
+            - name: Setup Node 16.x
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 16.x
 
-              - name: Install Packages
-                run: npm install
+            - name: Install Packages
+              run: npm install
 
     Test_And_Audit:
         needs: Setup
