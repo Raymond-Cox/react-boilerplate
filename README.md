@@ -57,4 +57,4 @@ Inside the repo, click `Settings`, then under code and automation section click 
 ## Extras
 
 -   Eslint configuration extends the [js-standard](https://standardjs.com/).
--   CSS choice is up to you. Parcel is configured to handle nearly anything except CSS-in-JS.
+-   CSS choice is up to you. Parcel is pre-configured to handle nearly anything except CSS-in-JS. I do recommend using css modules over plain css, because plain css changes do not trigger hot reloads for some reason.
