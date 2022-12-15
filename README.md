@@ -22,10 +22,22 @@ Aside from the React libraries, this project includes:
 
 Note: Axios is clamped to the latest version before 1.0.0 release. The v1 release had lots of issues early in, so I opted to stay behind until they iron out the problems.
 
+## Github Actions
+
+2 actions are configured in this project:
+
+1.  PR-Checks (audit, format, lint, test, build)
+2.  Merge-to-Main (audit, test, build, deploy)
+
+### Merge-to-main deployment
+
+It is setup to deploy for Github Pages. The action creates or updates a `gh-pages branch` in the repo with bundled production dist folder. You must configure the repo to point to the `gh-pages` branch to finish deploying the site.
+
+Inside the repo, click `Settings`, then under code and automation section click `Pages`. Finally, change the branch dropdown to `gh-pages`. Reference image below.
+
+![github pages setup info](./docs/gh-pages-setup.jpg)
+
 ## Extras
 
-Eslint configuration extends the [js-standard](https://standardjs.com/).
-
-## TODOS
-
--   Setup GH Actions PR: (format, lint, test, build) Merge-to-main: (test, build, deploy)
+-   Eslint configuration extends the [js-standard](https://standardjs.com/).
+-   CSS choice is up to you. Parcel is configured to handle nearly anything except CSS-in-JS.

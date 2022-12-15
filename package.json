@@ -7,7 +7,7 @@
     "scripts": {
         "start": "parcel --open",
         "clean": "rmdir /s dist",
-        "build": "parcel build",
+        "build": "parcel build --public-url ./",
         "test": "jest",
         "lint": "eslint .",
         "pretty": "prettier --write .",
