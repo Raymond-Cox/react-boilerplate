@@ -4,9 +4,6 @@
         "*.{js,mjs,jsx,cjs,ts,tsx}": [
             "@parcel/transformer-js",
             "@parcel/transformer-react-refresh-wrap"
-        ],
-        "*.svg": [
-            "@parcel/transformer-svg-react"
         ]
     }
 }
