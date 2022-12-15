@@ -38,6 +38,14 @@ Inside the repo, click `Settings`, then under code and automation section click 
 
 ![github pages setup info](./docs/gh-pages-setup.jpg)
 
+## SonarCloud setup
+
+-   Sign in through [SonarCloud](https://sonarcloud.io) with your Github Account.
+-   Follow the setup instructions to link your repository to SonarCloud. Afterwards, follow the Github Actions configuration tutorial.
+-   Disable Automatic Analysis in the Sonarcloud dashboard for the project. Administration -> Analysis Method.
+-   Update the organization and projectKey fields in the `sonar-project.properties` file.
+-   Be sure to add your `SONAR_TOKEN` to the repository secrets for Github Actions.
+
 ## Extras
 
 -   Eslint configuration extends the [js-standard](https://standardjs.com/).
