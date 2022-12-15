@@ -40,19 +40,23 @@ Note: Axios is clamped to the latest version before 1.0.0 release. The v1 releas
 
 ## Deployment
 
-This is setup to deploy for Github Pages. The `Merge-to-main` Github action creates or updates a `gh-pages` branch in the repo with bundled production dist folder. You must configure the repo to point the GH pages deployment to the `gh-pages` branch to finish deploying the site.
+This is setup to deploy for Github Pages. The `Merge-to-main` Github action updates the `gh-pages` branch in the repo with the bundled production dist folder.
 
-Inside the repo, click `Settings`, then under code and automation section click `Pages`. Finally, change the branch dropdown to `gh-pages`. Reference image below.
+To manage GitHub pages:
 
+1.  Inside the repo click `Settings`
+2.  Under code and automation section click `Pages`.
+
+It's important to NOT change the branch dropdown from `gh-pages`. Reference image below.
 ![github pages setup info](./docs/gh-pages-setup.jpg)
 
 ## SonarCloud setup
 
--   Sign in through [SonarCloud](https://sonarcloud.io) with your Github Account.
--   Follow the setup instructions to link your repository to SonarCloud. Afterwards, follow the Github Actions configuration tutorial.
--   Disable Automatic Analysis in the Sonarcloud dashboard for the project. Administration -> Analysis Method.
--   Update the organization and projectKey fields in the `sonar-project.properties` file.
--   Be sure to add your `SONAR_TOKEN` to the repository secrets for Github Actions.
+1.  Sign in through [SonarCloud](https://sonarcloud.io) with your Github Account.
+2.  Follow the setup instructions to link your repository to SonarCloud.
+3.  Then complete the steps for Github Actions configuration tutorial.
+4.  Disable Automatic Analysis in the Sonarcloud dashboard for the project. Administration -> Analysis Method.
+5.  Update the organization and projectKey fields in the `sonar-project.properties` file.
 
 ## Extras
 
