@@ -2,6 +2,14 @@
 
 A template to start React projects using Parcel as the bundler.
 
+## Getting Started
+
+Click the green "Use this template" button in the top of this repo. Create a new repository.
+
+Afterwards clone the repo to your local machine. Then run `npm install`, followed by `npm run start`.
+
+Check the scripts in `package.json` for further options.
+
 ## Toolchains
 
 includes the following toolchains setup and configured:
