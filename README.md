@@ -20,6 +20,7 @@ includes the following toolchains setup and configured:
 -   [jest](https://jestjs.io/) - Unit Testing
 -   [babel](https://babeljs.io/) - Compiler
 -   [sonarcloud](https://www.sonarsource.com/products/sonarcloud/) - Code Scanner
+-   [husky](https://github.com/typicode/husky) - Pre-commit Hook
 
 Note: Babel was included primarily for Jest testing React components. Parcel handles the rest of the project under the hood (with their own Babel configuration). Parcel is setup within this project to stay out of the way when necessary for our configuration.
 
@@ -30,6 +31,10 @@ Aside from the React libraries, this project includes:
 -   [Axios](https://axios-http.com/)
 
 Note: Axios is clamped to the latest version before 1.0.0 release. The v1 release had lots of issues early in, so I opted to stay behind until they iron out the problems.
+
+## Pre-Commit Hook (Husky)
+
+Husky runs before each git commit, ensuring lint/formatting stays intact. It is configured to format the entire project with prettier, and check for any outstanding eslint errors.
 
 ## Github Actions
 
