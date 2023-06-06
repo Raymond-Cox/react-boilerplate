@@ -25,7 +25,8 @@
     },
     "plugins": ["react", "jest"],
     "rules": {
-        "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
+        "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+        "react/prop-types": 0
     },
     "settings": {
         "react": {
