@@ -30,8 +30,6 @@ Aside from the React libraries, this project includes:
 
 -   [Axios](https://axios-http.com/)
 
-Note: Axios is clamped to the latest version before 1.0.0 release. The v1 release had lots of issues early in, so I opted to stay behind until they iron out the problems.
-
 ## Pre-Commit Hook (Husky)
 
 Husky runs before each git commit, ensuring lint/formatting stays intact. It is configured to format the entire project with prettier, and check for any outstanding eslint errors.
