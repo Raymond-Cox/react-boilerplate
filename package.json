@@ -12,7 +12,8 @@
         "lint": "eslint .",
         "pretty": "prettier --write .",
         "pretty-check": "prettier --check .",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "ts:check": "tsc"
     },
     "repository": {
         "type": "git",
@@ -41,6 +42,7 @@
         "@parcel/babel-preset-env": "^2.12.0",
         "@testing-library/react": "^16.0.0",
         "@types/jest": "^29.5.12",
+        "@types/react": "^18.3.3",
         "babel-jest": "^29.7.0",
         "eslint": "^8.48.0",
         "eslint-config-prettier": "^9.1.0",
@@ -58,10 +60,11 @@
         "lint-staged": "^15.2.7",
         "parcel": "^2.12.0",
         "prettier": "^3.3.2",
-        "process": "^0.11.10"
+        "process": "^0.11.10",
+        "typescript": "^5.4.5"
     },
     "lint-staged": {
-        "*.{js,jsx,html,md}": "eslint .",
+        "*.{js,jsx}": "eslint .",
         "*.{js,css,scss,md,json,html}": "prettier --write ."
     }
 }
