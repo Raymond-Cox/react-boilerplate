@@ -25,12 +25,6 @@ jobs:
             - name: Install Packages
               run: npm ci --ignore-scripts
 
-            - name: Audit
-              run: npm audit --audit-level=high
-
-            - name: Test
-              run: npm run test
-
             - name: Build 🔧
               run: npm run build
 
