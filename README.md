@@ -19,7 +19,6 @@ includes the following toolchains setup and configured:
 -   [eslint](https://eslint.org/) - Linter
 -   [jest](https://jestjs.io/) - Unit Testing
 -   [babel](https://babeljs.io/) - Compiler
--   [sonarcloud](https://www.sonarsource.com/products/sonarcloud/) - Code Scanner
 -   [husky](https://github.com/typicode/husky) - Pre-commit Hook
 
 Note: Babel was included primarily for Jest testing React components. Parcel handles the rest of the project under the hood (with their own Babel configuration). Parcel is setup within this project to stay out of the way when necessary for our configuration.
@@ -52,14 +51,6 @@ To manage GitHub pages:
 
 It's important to NOT change the branch dropdown from `gh-pages`. Reference image below.
 ![github pages setup info](./docs/gh-pages-setup.jpg)
-
-## SonarCloud setup
-
-1.  Sign in through [SonarCloud](https://sonarcloud.io) with your Github Account.
-2.  Follow the setup instructions to link your repository to SonarCloud.
-3.  Then complete the steps for Github Actions configuration tutorial.
-4.  Disable Automatic Analysis in the Sonarcloud dashboard for the project. Administration -> Analysis Method.
-5.  Update the organization and projectKey fields in the `sonar-project.properties` file.
 
 ## Extras
 
