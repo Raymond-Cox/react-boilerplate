@@ -101,15 +101,7 @@ module.exports = {
     // projects: undefined,
 
     // Use this configuration option to add custom reporters to Jest
-    reporters: [
-        'default',
-        [
-            'jest-sonar',
-            {
-                outputDirectory: 'coverage',
-            },
-        ],
-    ],
+    reporters: ['default'],
 
     // Automatically reset mock state before every test
     // resetMocks: false,

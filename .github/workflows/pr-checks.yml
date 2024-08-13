@@ -6,9 +6,6 @@ on:
     # allows you to manually trigger this in GH actions
     workflow_dispatch:
 
-env:
-    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
 jobs:
     Test_And_Audit:
         runs-on: ubuntu-latest
@@ -36,9 +33,6 @@ jobs:
 
             - name: Test
               run: npm run test
-
-            - name: SonarCloud Scan
-              uses: SonarSource/sonarcloud-github-action@master
 
             - name: Build
               run: npm run build
