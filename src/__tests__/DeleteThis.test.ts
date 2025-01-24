@@ -2,13 +2,13 @@
 // Important for ensuring the templates functionality stays in-tact over time
 // Feel free to delete this file after cloning template
 function example() {
-    return 'something'
+  return 'something'
 }
 
 describe('example', () => {
-    it('passes', () => {
-        const result = example()
+  it('passes', () => {
+    const result = example()
 
-        expect(result).toEqual('something')
-    })
+    expect(result).toEqual('something')
+  })
 })

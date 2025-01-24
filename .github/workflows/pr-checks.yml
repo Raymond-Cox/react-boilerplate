@@ -1,38 +1,29 @@
 name: PR Checks
 on:
-    pull_request:
-        branches:
-            - main
-    # allows you to manually trigger this in GH actions
-    workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+  # allows you to manually trigger this in GH actions
+  workflow_dispatch:
 
 jobs:
-    Test_And_Audit:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v4
-              with:
-                  fetch-depth: 0
+  Test_And_Audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-            - name: Setup Node 20.x
-              uses: actions/setup-node@v4
-              with:
-                  node-version: 20.x
+      - name: Setup Node 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
 
-            - name: Install Packages
-              run: npm ci --ignore-scripts
+      - name: Install Packages
+        run: npm ci --ignore-scripts
 
-            - name: Audit
-              run: npm audit --audit-level=high
+      - name: Audit
+        run: npm audit --audit-level=high
 
-            - name: Formatting
-              run: npm run pretty-check
-
-            - name: Lint
-              run: npm run lint
-
-            - name: Test
-              run: npm run test
-
-            - name: Build
-              run: npm run build
+      - name: Verify
+        run: npm run verify

@@ -1,12 +1,15 @@
 {
-    "presets": [
-        "@parcel/babel-preset-env",
-        [
-            "@babel/preset-react",
-            {
-                "runtime": "automatic"
-            }
-        ]
-    ],
-    "plugins": ["@parcel/babel-plugin-transform-runtime"]
+  "presets": [
+    "@parcel/babel-preset-env",
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
+    ]
+  ],
+  "plugins": [
+    "babel-plugin-react-compiler",
+    "@parcel/babel-plugin-transform-runtime"
+  ]
 }
