@@ -1,24 +1,24 @@
 // This configuration is intended for IDE support + type checking only.
 // Reference: https://stackoverflow.com/a/60223923
 {
-    "include": ["src"],
-    "exclude": [
-        "src/types/*.js",
-        "src/index.jsx",
-        "**/*.test.js",
-        "**/*.test.jsx"
-    ],
-    "compilerOptions": {
-        "checkJs": true,
-        "noEmit": true,
-        "strictNullChecks": true,
-        "strictFunctionTypes": true,
-        "lib": ["esnext", "dom"],
-        "jsx": "react-jsx",
-        "target": "ES6",
-        "module": "ESNext",
-        "moduleResolution": "Bundler",
-        "esModuleInterop": true,
-        "skipLibCheck": true
-    }
+  "include": ["src"],
+  "exclude": [
+    "src/types/*.js",
+    "src/index.jsx",
+    "**/*.test.js",
+    "**/*.test.jsx"
+  ],
+  "compilerOptions": {
+    "checkJs": true,
+    "noEmit": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "lib": ["esnext", "dom"],
+    "jsx": "react-jsx",
+    "target": "ES6",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  }
 }
