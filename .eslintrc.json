@@ -24,8 +24,9 @@
       "jsx": true
     }
   },
-  "plugins": ["react", "jest"],
+  "plugins": ["eslint-plugin-react-compiler", "react", "jest"],
   "rules": {
+    "react-compiler/react-compiler": "error",
     "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "react/prop-types": 0
   },
