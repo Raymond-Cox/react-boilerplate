@@ -1,5 +1,6 @@
 {
   "name": "react-boilerplate",
+  "type": "module",
   "version": "1.0.0",
   "description": "A template for React projects using Parcel",
   "source": "src/index.html",

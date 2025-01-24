@@ -2,12 +2,7 @@
 // Reference: https://stackoverflow.com/a/60223923
 {
   "include": ["src"],
-  "exclude": [
-    "src/types/*.js",
-    "src/index.jsx",
-    "**/*.test.js",
-    "**/*.test.jsx"
-  ],
+  // "exclude": ["**/*.test.ts", "**/*.test.tsx"],
   "compilerOptions": {
     "checkJs": true,
     "noEmit": true,
