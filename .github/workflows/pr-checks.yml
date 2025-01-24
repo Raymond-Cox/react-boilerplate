@@ -25,14 +25,5 @@ jobs:
       - name: Audit
         run: npm audit --audit-level=high
 
-      - name: Formatting
-        run: npm run pretty-check
-
-      - name: Lint
-        run: npm run lint
-
-      - name: Test
-        run: npm run test
-
-      - name: Build
-        run: npm run build
+      - name: Verify
+        run: npm run verify
