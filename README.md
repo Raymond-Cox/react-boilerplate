@@ -14,12 +14,12 @@ Check the scripts in `package.json` for further options.
 
 includes the following toolchains setup and configured:
 
--   [parcel](https://parceljs.org/) - Build tool
--   [prettier](https://prettier.io/) - Formatter
--   [eslint](https://eslint.org/) - Linter
--   [jest](https://jestjs.io/) - Unit Testing
--   [babel](https://babeljs.io/) - Compiler
--   [husky](https://github.com/typicode/husky) - Pre-commit Hook
+- [parcel](https://parceljs.org/) - Build tool
+- [prettier](https://prettier.io/) - Formatter
+- [eslint](https://eslint.org/) - Linter
+- [jest](https://jestjs.io/) - Unit Testing
+- [babel](https://babeljs.io/) - Compiler
+- [husky](https://github.com/typicode/husky) - Pre-commit Hook
 
 Note: Babel was included primarily for Jest testing React components. Parcel handles the rest of the project under the hood (with their own Babel configuration). Parcel is setup within this project to stay out of the way when necessary for our configuration.
 
@@ -27,7 +27,7 @@ Note: Babel was included primarily for Jest testing React components. Parcel han
 
 Aside from the React libraries, this project includes:
 
--   [Axios](https://axios-http.com/)
+- [Axios](https://axios-http.com/)
 
 ## Pre-Commit Hook (Husky)
 
@@ -54,5 +54,5 @@ It's important to NOT change the branch dropdown from `gh-pages`. Reference imag
 
 ## Extras
 
--   Eslint configuration extends the [js-standard](https://standardjs.com/).
--   CSS choice is up to you. Parcel is pre-configured to handle nearly anything except CSS-in-JS. I do recommend using css modules over plain css, because plain css changes do not trigger hot reloads for some reason.
+- Eslint configuration extends the [js-standard](https://standardjs.com/).
+- CSS choice is up to you. Parcel is pre-configured to handle nearly anything except CSS-in-JS. I do recommend using css modules over plain css, because plain css changes do not trigger hot reloads for some reason.
