@@ -4,6 +4,9 @@
     "description": "A template for React projects using Parcel",
     "source": "src/index.html",
     "browserslist": "> 0.5%, last 2 versions, not dead",
+    "engines": {
+        "node": ">=20"
+    },
     "scripts": {
         "start": "parcel --open -p 3000",
         "clean": "rm -rf dist && rm -rf .parcel-cache",
